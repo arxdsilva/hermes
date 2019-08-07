@@ -7,7 +7,7 @@ import (
 	"github.com/Masterminds/sprig"
 	"github.com/imdario/mergo"
 	"github.com/jaytaylor/html2text"
-	blackfriday "gopkg.in/russross/blackfriday.v2"
+	// blackfriday "gopkg.in/russross/blackfriday.v2"
 )
 
 // Hermes is an instance of the hermes email generator
@@ -74,9 +74,9 @@ type Body struct {
 }
 
 // ToHTML converts Markdown to HTML
-func (c Markdown) ToHTML() template.HTML {
-	return template.HTML(blackfriday.Run([]byte(string(c))))
-}
+// func (c Markdown) ToHTML() template.HTML {
+// 	return template.HTML(blackfriday.Run([]byte(string(c))))
+// }
 
 // Entry is a simple entry of a map
 // Allows using a slice of entries instead of a map
