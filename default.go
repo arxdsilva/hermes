@@ -276,7 +276,6 @@ func (dt *Default) HTMLTemplate() string {
                 </a>
             </td>
           </tr>
-
           <!-- Email Body -->
           <tr>
             <td class="email-body" width="100%">
@@ -351,7 +350,6 @@ func (dt *Default) HTMLTemplate() string {
                           </tr>
                         </table>
                       {{ end }}
-
                       <!-- Action -->
                       {{ with .Email.Body.Actions }}
                         {{ if gt (len .) 0 }}
@@ -371,16 +369,13 @@ func (dt *Default) HTMLTemplate() string {
                           {{ end }}
                         {{ end }}
                       {{ end }}
-
-                    {{ end }}
                     {{ with .Email.Body.Outros }} 
-                        {{ if gt (len .) 0 }}
-                          {{ range $line := . }}
-                            <p>{{ $line }}</p>
-                          {{ end }}
+                      {{ if gt (len .) 0 }}
+                        {{ range $line := . }}
+                          <p>{{ $line }}</p>
                         {{ end }}
                       {{ end }}
-
+                    {{ end }}
                     <p>
                       {{.Email.Body.Signature}},
                       <br />
